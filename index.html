@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kidcore MP3 Art Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pastel: {
+                pink: '#ffb7b2',
+                yellow: '#ffffb5',
+                green: '#b5ffb9',
+                blue: '#b5deff',
+                purple: '#e0b5ff',
+              }
+            },
+            animation: {
+              'gradient-x': 'gradient-x 15s ease infinite',
+              'bounce-slow': 'bounce 3s infinite',
+            },
+            keyframes: {
+              'gradient-x': {
+                '0%, 100%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'left center'
+                },
+                '50%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'right center'
+                },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background: linear-gradient(-45deg, #ffb7b2, #ffffb5, #b5ffb9, #b5deff, #e0b5ff);
+        background-size: 400% 400%;
+        animation: gradient-x 15s ease infinite;
+        font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
